@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaGroup - Профессиональное строительство и ремонт</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="preloader" id="preloader">
+        <div class="preloader__content">
+            <img src="./img/preloader.gif" alt="Загрузка..." class="preloader__house">
+            <div class="preloader__percent" id="loading-percent">0%</div>
+            <div class="preloader__text">Инициализация системы...</div>
+            <div class="preloader__loading-bar">
+                <div class="preloader__loading-progress" id="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cursor" id="custom-cursor">
+        <div class="cursor__icon cursor__icon--play"></div>
+        <div class="cursor__icon cursor__icon--pause"></div>
+    </div>
+
+    <header class="header">
+        <div class="header__logo">
+            <a href="javascript:void(0)" onclick="location.reload()">NovaGroup</a>
+        </div>
+        <nav class="header__nav">
+            <a href="#hero" class="header__link">Главная</a>
+            <a href="#promo-video" class="header__link">Видео</a>
+            <a href="#services" class="header__link">Услуги</a>
+            <a href="#skills" class="header__link">Навыки</a>
+            <a href="#about" class="header__link">Опыт</a>
+            <a href="#contact" class="btn btn--primary header__btn">Заказать звонок</a>
+            <button class="header__burger" id="burger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu__content">
+            <a href="#hero" class="mobile-menu__link">Главная</a>
+            <a href="#promo-video" class="mobile-menu__link">Видео</a>
+            <a href="#services" class="mobile-menu__link">Услуги</a>
+            <a href="#skills" class="mobile-menu__link">Навыки</a>
+            <a href="#about" class="mobile-menu__link">Опыт</a>
+            <a href="#contact" class="mobile-menu__link">Контакты</a>
+        </div>
+    </div>
+
+    <main>
+        <section id="hero" class="section hero active">
+            <div class="hero__content">
+                <h1 class="hero__title">СТРОИМ БУДУЩЕЕ ВМЕСТЕ</h1>
+                <p class="hero__text">
+                    Создаем пространства, в которых хочется жить и работать 
+                    <span class="hero__typing" id="typed-output-container">
+                        <span id="typed-output"></span>
+                    </span>
+                </p>
+                <a href="#contact" class="btn btn--primary btn--pulse hero__btn">Начать сотрудничество</a>
+            </div>
+        </section>
+
+        <section id="promo-video" class="section video">
+            <h2 class="section__title">Наш подход к работе</h2>
+            <p class="section__subtitle">Убедитесь в профессионализме нашей команды</p>
+            <div class="video__container" id="video-container">
+                <video class="video__element" id="main-video" 
+                      poster="./img/video-start.png" 
+                      preload="metadata"
+                      playsinline
+                      loop
+                      muted>
+                    <source src="video/under hero.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает тег video.
+                </video>
+            </div>
+        </section>
+
+        <section id="services" class="section services">
+            <h2 class="section__title">Наши услуги</h2>
+            <p class="section__subtitle">Полный спектр строительных и ремонтных работ</p>
+            <div class="services__bg-text" id="services-bg-text">
+                <span>У</span><span>С</span><span>Л</span><span>У</span><span>Г</span><span>И</span>
+            </div>
+            
+            <div class="services__container" id="services-horizontal">
+                <div class="services__wrapper">
+                    <div class="service-card">
+                        <h3 class="service-card__title">Архитектурное проектирование</h3>
+                        <p class="service-card__text">Разрабатываем индивидуальные проекты любой сложности с учетом всех пожеланий и требований</p>
+                    </div>
+                    <div class="service-card">
+                        <h3 class="service-card__title">Строительство домов</h3>
+                        <p class="service-card__text">Возводим надежные и комфортные дома под ключ с гарантией качества</p>
+                    </div>
+                    <div class="service-card">
+                        <h3 class="service-card__title">Капитальный ремонт</h3>
+                        <p class="service-card__text">Проводим полную реконструкцию помещений с использованием современных материалов</p>
+                    </div>
+                    <div class="service-card">
+                        <h3 class="service-card__title">Дизайн интерьеров</h3>
+                        <p class="service-card__text">Создаем стильные и функциональные пространства, отражающие ваш характер</p>
+                    </div>
+                    <div class="service-card">
+                        <h3 class="service-card__title">Инженерные системы</h3>
+                        <p class="service-card__text">Проектируем и монтируем все виды коммуникаций: отопление, электрика, водоснабжение</p>
+                    </div>
+                    <div class="service-card">
+                        <h3 class="service-card__title">Технический надзор</h3>
+                        <p class="service-card__text">Обеспечиваем контроль качества на всех этапах строительства</p>
+                    </div>
+                </div>
+                <div class="services__indicator">
+                    <div class="services__progress" id="scroll-progress"></div>
+                </div>
+                <div class="services__hint" id="scroll-hint">Используйте колесико мыши для прокрутки →</div>
+            </div>
+            <div class="services__end-indicator" id="end-indicator">
+                <div class="services__end-text">Продолжите знакомство с нашими возможностями</div>
+                <div class="services__end-arrow">↓</div>
+            </div>
+        </section>
+        
+        <section id="skills" class="section skills">
+            <h2 class="section__title">Наша экспертиза</h2>
+            <p class="section__subtitle">Профессионализм, подтвержденный годами работы</p>
+            
+            <div class="skill">
+                <div class="skill__header">
+                    <h4 class="skill__title">Монолитное строительство</h4>
+                    <div class="skill__percent" data-target="95">0%</div>
+                </div>
+                <div class="skill__progress">
+                    <div class="skill__bar" data-progress="95"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill__header">
+                    <h4 class="skill__title">Архитектура проектов</h4>
+                    <div class="skill__percent" data-target="90">0%</div>
+                </div>
+                <div class="skill__progress">
+                    <div class="skill__bar" data-progress="90"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill__header">
+                    <h4 class="skill__title">Управление проектами</h4>
+                    <div class="skill__percent" data-target="92">0%</div>
+                </div>
+                <div class="skill__progress">
+                    <div class="skill__bar" data-progress="92"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill__header">
+                    <h4 class="skill__title">Дизайн интерьеров</h4>
+                    <div class="skill__percent" data-target="88">0%</div>
+                </div>
+                <div class="skill__progress">
+                    <div class="skill__bar" data-progress="88"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="benefits" class="section benefits">
+            <h2 class="section__title">Почему выбирают нас</h2>
+            <p class="section__subtitle">Наши преимущества - ваша уверенность в результате</p>
+            <div class="benefits__grid">
+                <div class="benefit">
+                    <div class="benefit__icon">⏱️</div>
+                    <h3 class="benefit__title">Соблюдение сроков</h3>
+                    <p class="benefit__text">Строгое соблюдение оговоренных сроков сдачи объектов без компромиссов в качестве</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit__icon">🛡️</div>
+                    <h3 class="benefit__title">Гарантия качества</h3>
+                    <p class="benefit__text">Предоставляем официальную гарантию на все виды выполненных работ и использованные материалы</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit__icon">💰</div>
+                    <h3 class="benefit__title">Прозрачная смета</h3>
+                    <p class="benefit__text">Фиксированные цены в договоре, без скрытых платежей и непредвиденных расходов</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit__icon">👨‍💼</div>
+                    <h3 class="benefit__title">Персональный менеджер</h3>
+                    <p class="benefit__text">Выделенный специалист сопровождает ваш проект от первой консультации до сдачи объекта</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit__icon">💡</div>
+                    <h3 class="benefit__title">Современные технологии</h3>
+                    <p class="benefit__text">Используем передовые материалы и методы в строительстве для достижения лучшего результата</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit__icon">👷</div>
+                    <h3 class="benefit__title">Опытная команда</h3>
+                    <p class="benefit__text">Наша команда состоит из сертифицированных специалистов с многолетним опытом в отрасли</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section about">
+            <h2 class="section__title">Нам доверяют</h2>
+            <p class="section__subtitle">Цифры, которые говорят сами за себя</p>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat__number" data-target="12">0</div>
+                    <span class="stat__text">Лет успешной работы</span>
+                </div>
+                <div class="stat">
+                    <div class="stat__number" data-target="347">0</div>
+                    <span class="stat__text">Реализованных проектов</span>
+                </div>
+                <div class="stat">
+                    <div class="stat__number" data-target="98">0</div>
+                    <span class="stat__text">% Довольных клиентов</span>
+                </div>
+                <div class="stat">
+                    <div class="stat__number" data-target="24">0</div>
+                    <span class="stat__text">Профессионала в команде</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section projects">
+            <h2 class="section__title">Наш последний проект</h2>
+            <p class="section__subtitle">Пример нашей недавней работы по реконструкции</p>
+            <div class="projects__container">
+                <img src="./img/last-project.jpg" alt="Бурдж Халифа" class="projects__image">
+            </div>
+        </section>
+
+        <section id="partners" class="section partners">
+            <h2 class="section__title">Наши партнеры</h2>
+            <p class="section__subtitle">Компании, которые нам доверяют</p>
+            <div class="partners__slider">
+                <div class="partners__track">
+                    <img src="./img/bi.png" alt="Партнер 1" class="partner__logo">
+                    <img src="./img/egov.png" alt="Партнер 2" class="partner__logo">
+                    <img src="./img/freedom.png" alt="Партнер 3" class="partner__logo">
+                    <img src="./img/telecom.png" alt="Партнер 4" class="partner__logo">
+                    <img src="./img/kaspi.png" alt="Партнер 5" class="partner__logo">
+                    <img src="./img/krisha.png" alt="Партнер 6" class="partner__logo">
+                    <img src="./img/samal.png" alt="Партнер 7" class="partner__logo">
+                    <img src="./img/svet.png" alt="Партнер 8" class="partner__logo">
+                    <img src="./img/bi.png" alt="Партнер 1" class="partner__logo">
+                    <img src="./img/egov.png" alt="Партнер 2" class="partner__logo">
+                    <img src="./img/freedom.png" alt="Партнер 3" class="partner__logo">
+                    <img src="./img/telecom.png" alt="Партнер 4" class="partner__logo">
+                    <img src="./img/kaspi.png" alt="Партнер 5" class="partner__logo">
+                    <img src="./img/krisha.png" alt="Партнер 6" class="partner__logo">
+                    <img src="./img/samal.png" alt="Партнер 7" class="partner__logo">
+                    <img src="./img/svet.png" alt="Партнер 8" class="partner__logo">
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact">
+            <h2 class="section__title">Начнем ваш проект?</h2>
+            <p class="section__subtitle">Оставьте заявку и мы предложим лучшее решение</p>
+            <form class="contact__form" id="contact-form">
+                <input type="text" placeholder="Ваше полное имя" required class="contact__input" id="contact-name">
+                <input type="tel" placeholder="Контактный телефон" required class="contact__input" id="contact-phone">
+                <input type="email" placeholder="Электронная почта" class="contact__input" id="contact-email">
+                <textarea placeholder="Опишите ваш проект или задайте вопрос" class="contact__textarea" id="contact-message"></textarea>
+                <button type="submit" class="btn btn--primary contact__btn">Получить консультацию</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__left">
+                <h3 class="footer__title">NovaGroup</h3>
+                <p class="footer__text">Оставайтесь на связи с нами в социальных сетях. Мы всегда готовы ответить на ваши вопросы.</p>
+                <div class="footer__socials">
+                    <a href="#" class="footer__social-link" aria-label="Telegram">
+                        <img src="./img/telegram.png" alt="Telegram">
+                    </a>
+                    <a href="#" class="footer__social-link" aria-label="Instagram">
+                        <img src="./img/instagram.jpg" alt="Instagram">
+                    </a>
+                    <a href="#" class="footer__social-link" aria-label="WhatsApp">
+                        <img src="./img/whatsapp.jpg" alt="WhatsApp">
+                    </a>
+                </div>
+                <p class="footer__contact">📞 +7 (707) 123-45-67</p>
+                <p class="footer__contact">📞 +7 (777) 531-12-41</p>
+                <p class="footer__contact">📞 +7 (747) 142-54-85</p>
+                <p class="footer__contact">✉️ info@novagroup.kz</p>
+                <p class="footer__contact">✉️ store@novagroup.kz</p>
+                <p class="footer__contact">✉️ help@novagroup.kz</p>
+            </div>
+            <div class="footer__right">
+                <h3 class="footer__title">Где мы находимся</h3>
+                <p class="footer__text">📍 Алматы, Бостандыкский район, Абая 52г, Офис 404</p>
+                <div class="footer__map">
+<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A5526d51567819f6e03de318e1e134a6b669ad8de6aa24864bb221086152904db&amp;source=constructor"></iframe>
+                </div>
+            </div>
+        </div>
+        <p class="footer__copyright">&copy; 2013 NovaGroup. Все права защищены.</p>
+    </footer>
+
+    <div class="modal" id="success-modal">
+        <div class="modal__content">
+            <div class="modal__icon">✅</div>
+            <h3 class="modal__title">Заявка принята!</h3>
+            <p class="modal__text">Спасибо за обращение! Наш специалист свяжется с вами в течение 30 минут для уточнения деталей и согласования времени консультации.</p>
+            <button class="btn btn--primary modal__close" id="modal-close">Понятно</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
